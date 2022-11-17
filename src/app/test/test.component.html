@@ -31,3 +31,29 @@
     <input type="submit" value="buy" [disabled]="p.quantity==0" class="btn btn-danger">
 <input type="submit" value="like">
 </div>
+---------------------------------------------------
+<div *ngFor="let p of Products">
+    <div *ngIf="p.quantity>0" [style.backgroundColor]="'green'">
+{{p.id}}
+{{p.title}}
+{{p.price}}
+{{p.like}}
+</div>
+<div *ngIf="p.quantity==0" [style.backgroundColor]="'red'">
+    {{p.id}}
+    {{p.title}}
+    {{p.price}}
+    {{p.like}}
+    </div>
+</div>
+<h1>ngStyle</h1>
+<div *ngFor="let p of Products">
+    <div [ngStyle]="{'backgroundColor':p.quantity>0?'green':'red'}">
+{{p.id}}
+{{p.title}}
+{{p.price}}
+{{p.like}}
+</div>
+<a [routerLink]="['/detail/',p.id]">detail </a>
+<a routerLink="/detail/{{p.id}}">detail </a>
+</div>
