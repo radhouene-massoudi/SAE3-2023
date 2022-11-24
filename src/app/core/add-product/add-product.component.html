@@ -1,0 +1,24 @@
+<form #f="ngForm">
+<label>id</label>
+<input type="number" name="id" ngModel>
+<label>title *</label>
+<input type="text" name="title" ngModel required minlength="3" #title="ngModel">
+<div *ngIf="title.invalid && title.touched">
+<div *ngIf="title.errors?.['required']">
+required
+</div>
+<div *ngIf="title.errors?.['minlength']">
+    minlength
+    </div>
+
+</div>
+<label>price</label>
+<input type="text" name="price" ngModel #p="ngModel" pattern="[0-9]*">
+<div *ngIf="p.invalid">
+pattern 
+</div>
+<label>quantity</label>
+<input type="number" name="quantity" ngModel>
+<input type="submit" value="add product" (click)="showForm(title)"  >
+   
+</form>
