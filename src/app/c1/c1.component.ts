@@ -2,16 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { FirstService } from '../first.service';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-c1',
+  templateUrl: './c1.component.html',
+  styleUrls: ['./c1.component.css']
 })
-export class LoginComponent implements OnInit {
+export class C1Component implements OnInit {
 
   constructor(private s:FirstService) { }
 
   ngOnInit(): void {
-    this.s.showMsg();
+    this.s.addElementToTab('SAE3')
   }
 
 }

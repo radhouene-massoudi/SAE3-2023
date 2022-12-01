@@ -1,6 +1,6 @@
 <form #f="ngForm">
-    <label>id</label>
-    <input type="text" name="id" ngModel required pattern="[0-9]*" #idt="ngModel">
+    <label>ref</label>
+    <input type="text" name="ref" ngModel required pattern="[0-9]*" #idt="ngModel">
     <div *ngIf="idt.invalid && idt.touched">
         <div *ngIf="idt.errors?.['required']">
         required
@@ -32,7 +32,7 @@
     </div>
     <div *ngIf="q.errors?.['pattern']">pattern</div>
 </div>
-    <input type="submit" value="add product" (click)="addElementToTab(f.value)" [disabled]="f.invalid">
+    <input type="submit" value="add product" (click)="addP(f.value)">
        
     </form>
     
