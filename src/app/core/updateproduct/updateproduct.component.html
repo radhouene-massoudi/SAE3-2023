@@ -1,0 +1,39 @@
+<form #f="ngForm">
+    <label>ref</label>
+    <input type="text" name="ref" [(ngModel)]="p.ref" required pattern="[0-9]*" #idt="ngModel">
+    <div *ngIf="idt.invalid && idt.touched">
+        <div *ngIf="idt.errors?.['required']">
+        required
+        </div>
+        <div *ngIf="idt.errors?.['pattern']">
+            pattern
+            </div>
+        
+        </div>
+    <label>title</label>
+    <input type="text" name="title" [(ngModel)]="p.title" required minlength="3" #title="ngModel">
+    <div *ngIf="title.invalid && title.touched">
+    <div *ngIf="title.errors?.['required']">
+    required
+    </div>
+    <div *ngIf="title.errors?.['minlength']">
+        minlength
+        </div>
+    
+    </div>
+    
+    <label>quantity</label>
+    <input type="text" name="quantity" [(ngModel)]="p.quantity" #q="ngModel" pattern="[0-9]{3}">
+<div *ngIf="q.invalid">
+    <div *ngIf="q.value<0">
+        the quantity must be granter than 0
+
+        
+    </div>
+    <div *ngIf="q.errors?.['pattern']">pattern</div>
+</div>
+    <input type="submit" value="update product" (click)="updateP(f.value)">
+       
+    </form>
+    
+    

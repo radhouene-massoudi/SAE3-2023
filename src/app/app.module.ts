@@ -15,6 +15,9 @@ import { AddProductComponent } from './core/add-product/add-product.component';
 import { FormproductComponent } from './core/formproduct/formproduct.component';
 import { C1Component } from './c1/c1.component';
 import { C2Component } from './c2/c2.component';
+import { ProductsComponent } from './core/products/products.component';
+import { RemoveproductComponent } from './core/removeproduct/removeproduct.component';
+import { UpdateproductComponent } from './core/updateproduct/updateproduct.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { C2Component } from './c2/c2.component';
     AddProductComponent,
     FormproductComponent,
     C1Component,
-    C2Component
+    C2Component,
+    ProductsComponent,
+    RemoveproductComponent,
+    UpdateproductComponent
   ],
   imports: [
     BrowserModule,

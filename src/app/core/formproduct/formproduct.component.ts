@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ProductService } from '../serviceproduct/product.service';
 
 @Component({
@@ -8,7 +9,8 @@ import { ProductService } from '../serviceproduct/product.service';
 })
 export class FormproductComponent implements OnInit {
 product:any=[];
-  constructor(private productService:ProductService) { }
+  constructor(private productService:ProductService,
+    private router:Router) { }
 
   ngOnInit(): void {
     
@@ -19,7 +21,8 @@ this.product.push(data);
 addP(f:any){
   this.productService.addProduct(f).subscribe(
     ()=>{
-      console.log('added')
+      //console.log('added')
+      this.router.navigate(['products'])
     },
     (err)=>{
       
