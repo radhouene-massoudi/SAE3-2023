@@ -1,0 +1,15 @@
+<form #f="ngForm">
+    <label>ref</label>
+    <input type="text" name="ref" ngModel required pattern="[0-9]*" #idt="ngModel">
+    <app-errors [err]="idt"></app-errors>
+    <label>title</label>
+    <input type="text" name="title" ngModel required minlength="3" #title="ngModel">
+   
+    <app-errors [err]="title"></app-errors>
+    <label>quantity</label>
+    <input type="text" name="quantity" ngModel #q="ngModel" pattern="[0-9]{3}">
+
+    <app-errors [err]="q" [pattern2]="q"></app-errors>
+    <input type="submit" value="add product">
+       
+    </form>

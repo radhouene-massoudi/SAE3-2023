@@ -18,6 +18,11 @@ import { C2Component } from './c2/c2.component';
 import { ProductsComponent } from './core/products/products.component';
 import { RemoveproductComponent } from './core/removeproduct/removeproduct.component';
 import { UpdateproductComponent } from './core/updateproduct/updateproduct.component';
+import { TvComponent } from './tv/tv.component';
+import { MobileComponent } from './mobile/mobile.component';
+import { ShowoneproductComponent } from './showoneproduct/showoneproduct.component';
+import { ErrorsComponent } from './errors/errors.component';
+import { ValidationwithinputComponent } from './validationwithinput/validationwithinput.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +40,12 @@ import { UpdateproductComponent } from './core/updateproduct/updateproduct.compo
     C2Component,
     ProductsComponent,
     RemoveproductComponent,
-    UpdateproductComponent
+    UpdateproductComponent,
+    TvComponent,
+    MobileComponent,
+    ShowoneproductComponent,
+    ErrorsComponent,
+    ValidationwithinputComponent
   ],
   imports: [
     BrowserModule,
